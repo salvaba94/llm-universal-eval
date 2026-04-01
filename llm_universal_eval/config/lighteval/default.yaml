@@ -1,0 +1,13 @@
+# lighteval harness configuration
+
+tasks:
+  - math_500
+  - gpqa:diamond
+  - lcb:codegeneration_v6
+  - aime25
+
+provider: "hosted_vllm"
+api_key: ""
+model_name:
+timeout: 2400
+concurrent_requests: 128

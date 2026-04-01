@@ -1,0 +1,15 @@
+# LLM Universal Eval Configuration
+
+output_dir: "./results"
+seed: 42
+benchmark: [all]
+dry_run: false
+
+defaults:
+  - _self_
+  - model: default
+  - lm_eval: default
+  - lighteval: default
+  - swebench: default
+
+

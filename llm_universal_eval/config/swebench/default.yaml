@@ -1,0 +1,9 @@
+# SWE-bench harness configuration
+
+dataset_name: "princeton-nlp/SWE-bench_Verified"
+split: "test"
+max_workers: 4
+run_id: "eval"
+api_key: "EMPTY"
+predictions_path:  # set to a .jsonl path to skip inference and go straight to evaluation
+prompt_style: "style-3"  # style-2, style-3, full_file_gen, style-2-edits-only

@@ -1,0 +1,12 @@
+# lm-eval harness configuration
+
+tasks:
+  - gsm8k_platinum_cot_llama
+  - ifeval
+  - mmlu_pro
+
+max_length: 96000
+num_concurrent: 128
+max_retries: 3
+tokenized_requests: false
+tokenizer_backend:

@@ -9,11 +9,13 @@ description = "Evaluation harnesses (lm-eval, lighteval) for quantized model ben
 requires-python = ">=3.12"
 license = { file = "LICENSE" }
 dependencies = [
-    "lm-eval[api]",
-    "lighteval @ git+https://github.com/neuralmagic/lighteval.git@reasoning",
+    "hydra-core",
+    "pydantic>=2,<3",
+    "lm-eval[tasks]>=0.4.11",
+    "lighteval[math,extended_tasks]",
     "pyyaml",
-    "langdetect",
-    "immutabledict",
+    "litellm[caching]>=1.66.0",
+    "diskcache",
     "swebench[datasets]",
 ]
 
@@ -23,3 +25,9 @@ llm-universal-eval = "llm_universal_eval.cli:main"
 [tool.uv]
 package = true
 prerelease = "allow"
+override-dependencies = [
+    "antlr4-python3-runtime==4.13.2",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true

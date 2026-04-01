@@ -40,5 +40,6 @@ htmlcov/
 
 # Benchmark outputs
 results/
+.litellm_cache/
 
 uv.lock
