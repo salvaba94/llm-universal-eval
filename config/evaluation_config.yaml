@@ -1,0 +1,40 @@
+model:
+  name: "salbeal/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-int4-AutoRound"
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+
+evaluation:
+  output_dir: "results"
+  seed: 42
+  generation:
+    do_sample: true
+    temperature: 1.0
+    top_p: 0.95
+    top_k: 20
+    min_p: 0.0
+    max_gen_toks: 64000
+    presence_penalty: 1.5
+    repetition_penalty: 1.0
+  lm_eval:
+    max_length: 96000
+    num_concurrent: 128
+    max_retries: 3
+    tokenized_requests: false
+    tokenizer_backend:
+    timeout: 2400
+    task_timeouts:
+      mmlu_pro_chat: 3600
+  lighteval:
+    provider: "hosted_vllm"
+    timeout: 3600
+    max_model_length: 96000
+    concurrent_requests: 64
+    api_key: ""
+  swebench:
+    dataset_name: "princeton-nlp/SWE-bench_Verified"
+    split: "test"
+    max_workers: 4
+    run_id: "eval"
+    api_key: "EMPTY"
