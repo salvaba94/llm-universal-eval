@@ -13,9 +13,9 @@ The package installs a console script named `llm-universal-eval`.
 
 ## Usage
 
-### 1. Start vLLM server (in another terminal)
+### 1. Start vLLM server
 
-Start the vLLM in another terminal and possibly another environment (lighteval hardcoded dependencies are not quite compatible with current vLLM versions):
+Start vLLM in another terminal and possibly another environment (lighteval hardcoded dependencies are not quite compatible with current vLLM versions):
 
 ```bash
 vllm serve salbeal/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-int4-AutoRound \
