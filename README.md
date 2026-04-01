@@ -44,20 +44,20 @@ swebench/default.yaml  # SWE-bench dataset, split, workers, predictions_path
 | `tokenized_requests` | Whether to send tokenized inputs |
 | `tokenizer_backend` | Tokenizer backend override |
 
-Default tasks: `gsm8k_platinum_cot_llama`, `ifeval`, `mmlu_pro`
+Default tasks: `gsm8k_platinum_cot_llama`, `ifeval`, `mmlu_pro`. These tasks will be launchjed if the user invokes lm-eval evaluation battery.
 
 ### lighteval (`lighteval/default.yaml`)
 
 | Key | Description |
 |---|---|
-| `tasks` | List of lighteval task strings (e.g. `math_500\|0`) |
+| `tasks` | List of lighteval task strings (e.g. `math_500\`) |
 | `provider` | LiteLLM provider (default: `hosted_vllm`) |
 | `model_name` | Override model name passed to LiteLLM |
 | `api_key` | API key (empty for local vLLM) |
 | `timeout` | Request timeout in seconds |
 | `concurrent_requests` | Concurrent requests to vLLM |
 
-Default tasks: `math_500|0`, `gpqa:diamond|0`, `lcb:codegeneration_v6|0`, `aime25|0`
+Default tasks: `math_500`, `gpqa:diamond`, `lcb:codegeneration_v6`, `aime25`
 
 The launcher writes a `litellm_config.yaml` into the output directory and passes it to each `lighteval endpoint litellm` invocation.
 
