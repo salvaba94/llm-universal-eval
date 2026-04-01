@@ -66,9 +66,6 @@ llm-universal-eval --config config/evaluation_config.yaml --benchmarks swebench_
 ### 3. Run lm-eval benchmarks manually
 
 ```bash
-cd /home/aidev/Workspace/evaluation
-source .venv/bin/activate
-
 # IfEval (0-shot)
 lm_eval --model local-chat-completions \
   --tasks ifeval \
