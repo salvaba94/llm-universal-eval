@@ -137,10 +137,7 @@ llm-universal-eval benchmark=[lm_eval,aime25]
 
 The `tasks` list in each harness YAML defines the **default set** — the tasks that run when you select a harness by name (`benchmark=[lighteval]`) or run everything (`benchmark=[all]`).
 
-It is not a gatekeeping list. If you explicitly name a task in `benchmark` that isn't in the default list, it runs anyway — routed automatically to the right harness:
-
-- Tasks containing `:` or `|` → **lighteval**
-- Plain task names → **lm-eval**
+It is not a gatekeeping list. If you explicitly name a task in `benchmark` that isn't in the default list, it runs anyway — routed automatically to the right harness **lighteval**, **lm-eval** or **swebench**.
 
 ```bash
 # Runs gpqa:diamond even though it may not be in lighteval.tasks
